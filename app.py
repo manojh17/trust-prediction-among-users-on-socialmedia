@@ -187,7 +187,7 @@ def logout():
     return redirect(url_for('login'))
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False,host:0.0.0.0,port:3001)
 
 
 
@@ -244,4 +244,4 @@ if __name__ == '__main__':
 #     return render_template("index.html", result=None)
 
 # if __name__ == "__main__":
-#     app.run(debug=True)
+#     app.run(debug=False,host:0.0.0.0,port:3001)
