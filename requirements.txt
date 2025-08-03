@@ -6,4 +6,5 @@ pickle
 numpy
 pandas
 functools
+xgboost
 joblib
