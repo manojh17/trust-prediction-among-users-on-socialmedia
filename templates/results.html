@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trust Prediction - Results</title>
+  <link rel="stylesheet" href="../static/css/styles.css">
+  <link rel="stylesheet" href="../static/css/dashboard.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <h1>User Trust Prediction</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="#" id="logout-btn">Logout</a></li>
+        </ul>
+      </nav>
+      <div class="theme-toggle">
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </header>
+
+    <main>
+      <section class="dashboard-container">
+        <div class="dashboard-header">
+          <h2>Trust Prediction Result</h2>
+          <p>Analysis of the provided social media profile</p>
+        </div>
+        
+        <div id="result-container" class="result-container">
+          <div class="result-card animate-in">
+            <h3>Trust Prediction Result</h3>
+            <div class="result-score">
+              <div id="trust-score-display" class="trust-score">85</div>
+              <div id="trust-label" class="trust-label trusted">Trusted</div>
+            </div>
+            <div class="result-details">
+              <p>This profile demonstrates strong indicators of trustworthiness based on the provided metrics.</p>
+              <ul id="result-factors">
+                <li>Strong original content ratio (0.78)</li>
+                <li>Healthy engagement metrics (reputation score: 82)</li>
+                <li>Good follower to following ratio (12,500:890)</li>
+                <li>High context score (91) indicating relevant content</li>
+                <li>Consistent posting behavior (statuses count: 4,280)</li>
+              </ul>
+            </div>
+            <div class="action-buttons">
+              <a href="dashboard.html" class="btn secondary-btn">Analyze Another Profile</a>
+              <button id="export-pdf" class="btn primary-btn">Export Report</button>
+            </div>
+          </div>
+          
+          <div class="metrics-breakdown">
+            <h3>Metrics Breakdown</h3>
+            <div class="metrics-grid">
+              <div class="metric-card">
+                <h4>Content Quality</h4>
+                <div class="metric-value">Excellent</div>
+                <div class="metric-bar">
+                  <div class="bar-fill" style="width: 85%;"></div>
+                </div>
+              </div>
+              <div class="metric-card">
+                <h4>Engagement</h4>
+                <div class="metric-value">Very Good</div>
+                <div class="metric-bar">
+                  <div class="bar-fill" style="width: 78%;"></div>
+                </div>
+              </div>
+              <div class="metric-card">
+                <h4>Network Quality</h4>
+                <div class="metric-value">Excellent</div>
+                <div class="metric-bar">
+                  <div class="bar-fill" style="width: 92%;"></div>
+                </div>
+              </div>
+              <div class="metric-card">
+                <h4>Consistency</h4>
+                <div class="metric-value">Good</div>
+                <div class="metric-bar">
+                  <div class="bar-fill" style="width: 70%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>User Trust Prediction</h2>
+          <p>Advanced Trust Prediction Platform</p>
+        </div>
+    
+      </div>
+      
+    </footer>
+  </div>
+
+  <script src="../static/js/main.js"></script>
+  <script src="../static/js/darkMode.js"></script>
+  
+  <style>
+    .metrics-breakdown {
+      background-color: var(--card);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      box-shadow: 0 8px 24px var(--shadow);
+      margin-top: var(--space-xl);
+      animation: fadeSlideUp 0.7s ease-out forwards;
+    }
+    
+    .metrics-breakdown h3 {
+      margin-bottom: var(--space-lg);
+      color: var(--primary);
+    }
+    
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-lg);
+    }
+    
+    .metric-card {
+      padding: var(--space-md);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+    }
+    
+    .metric-value {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin: var(--space-sm) 0;
+    }
+    
+    .metric-bar {
+      height: 8px;
+      background-color: var(--surface);
+      border-radius: var(--radius-full);
+      overflow: hidden;
+    }
+    
+    .bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+      border-radius: var(--radius-full);
+    }
+    
+    .action-buttons {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-md);
+      margin-top: var(--space-lg);
+    }
+    
+    @media (max-width: 768px) {
+      .action-buttons {
+        flex-direction: column;
+      }
+      
+      .action-buttons .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</body>
+</html>

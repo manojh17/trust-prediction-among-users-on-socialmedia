@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="dashboard-container">
+    <div class="dashboard-header">
+        <h1>Welcome, {{ name }}</h1>
+        <p>Make a trust prediction by filling out the form below</p>
+    </div>
+    
+    <div class="dashboard-content">
+        <div class="prediction-form-container">
+            <div class="card prediction-form-card">
+                <h2>Trust Prediction</h2>
+                <form class="prediction-form" action="{{ url_for('dashboard') }}" method="post">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="reputation_score">Reputation Score</label>
+                            <input type="number" step="0.01" id="reputation_score" name="reputation_score" required placeholder="0.0-1.0" min="0" max="1">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="orig_content_ratio">Original Content Ratio</label>
+                            <input type="number" step="0.01" id="orig_content_ratio" name="orig_content_ratio" required placeholder="0.0-1.0" min="0" max="1">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="mentions_ratio">Mentions Ratio</label>
+                            <input type="number" step="0.01" id="mentions_ratio" name="mentions_ratio" required placeholder="0.0-1.0" min="0" max="1">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="hashtag_ratio">Hashtag Ratio</label>
+                            <input type="number" step="0.01" id="hashtag_ratio" name="hashtag_ratio" required placeholder="0.0-1.0" min="0" max="1">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="context_score">Context Score</label>
+                            <input type="number" step="0.01" id="context_score" name="context_score" required placeholder="0.0-1.0" min="0" max="1">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="retweet_ratio">Retweet Ratio</label>
+                            <input type="number" step="0.01" id="retweet_ratio" name="retweet_ratio" required placeholder="0.0-1.0" min="0" max="1">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="like_hindex">Like H-index</label>
+                            <input type="number" step="0.01" id="like_hindex" name="like_hindex" required placeholder="0.0-100.0" min="0">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="social_reputation">Social Reputation</label>
+                            <input type="number" step="0.01" id="social_reputation" name="social_reputation" required placeholder="0.0-1.0" min="0" max="1">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="followers_count">Followers Count</label>
+                            <input type="number" id="followers_count" name="followers_count" required placeholder="e.g. 1000">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="listed_count">Listed Count</label>
+                            <input type="number" id="listed_count" name="listed_count" required placeholder="e.g. 50">
+                        </div>
+                    </div>
+                    
+                    <!-- <div class="form-row">
+                        <div class="form-group">
+                            <label for="id_str">ID String</label>
+                            <input type="text" id="id_str" name="id_str" required placeholder="User ID">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="has_url">Has URL</label>
+                            <select id="has_url" name="has_url" required>
+                                <option value="true">Yes</option>
+                                <option value="false">No</option>
+                            </select>
+                        </div>
+                    </div> -->
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="statuses_count">Statuses Count</label>
+                            <input type="number" id="statuses_count" name="statuses_count" required placeholder="e.g. 500">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mention_by_others">Mentions by Others</label>
+                            <input type="number" id="mention_by_others" name="mention_by_others" required placeholder="e.g. 100">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="retweet_hindex">Retweet H-index</label>
+                            <input type="number" step="0.01" id="retweet_hindex" name="retweet_hindex" required placeholder="0.0-100.0" min="0">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="friends_count">Friends Count</label>
+                            <input type="number" id="friends_count" name="friends_count" required placeholder="e.g. 300">
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block">Predict Trust</button>
+                </form>
+            </div>
+        </div>
+        
+        {% if prediction_result %}
+        <div class="prediction-result-container">
+            <div class="card prediction-result-card">
+                <h2>Prediction Result</h2>
+                <div class="result-content">
+                    <div class="trust-meter-container">
+                        <div class="trust-meter">
+                            <div class="trust-meter-fill" style="width: {{ prediction_result.score }}%; background-color: {{ prediction_result.color }};"></div>
+                        </div>
+                        <div class="trust-score">{{ prediction_result.score }}%</div>
+                    </div>
+                    
+                    <div class="trust-classification" style="color: {{ prediction_result.color }};">
+                        <h3>{{ prediction_result.classification }}</h3>
+                    </div>
+                    
+                   
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

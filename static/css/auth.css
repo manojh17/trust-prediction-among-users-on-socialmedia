@@ -1,0 +1,160 @@
+/* Auth Pages Styles */
+.auth-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: var(--space-xl) 0;
+}
+
+.auth-card {
+  background-color: var(--card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: 0 8px 24px var(--shadow);
+}
+
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: var(--space-sm);
+  color: var(--primary);
+}
+
+.auth-card p {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  color: var(--text-secondary);
+}
+
+.form-group {
+  margin-bottom: var(--space-lg);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--space-xs);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.form-group input {
+  width: 100%;
+  padding: var(--space-md);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  background-color: var(--background);
+  color: var(--text-primary);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.2);
+}
+
+.form-group small {
+  display: block;
+  margin-top: var(--space-xs);
+  color: var(--text-tertiary);
+  font-size: 0.875rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-xl);
+}
+
+.form-actions .btn {
+  min-width: 150px;
+}
+
+.auth-footer {
+  margin-top: var(--space-xl);
+  text-align: center;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border);
+}
+
+.auth-footer p {
+  margin-bottom: 0;
+}
+
+/* Password input container */
+.password-input-container {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  color: var(--text-secondary);
+}
+
+.password-toggle:hover {
+  color: var(--text-primary);
+}
+
+.password-toggle:focus {
+  outline: none;
+  color: var(--primary);
+}
+
+/* Form validation styles */
+.form-group.error input {
+  border-color: var(--error);
+}
+
+.form-group.error .error-message {
+  color: var(--error);
+  font-size: 0.875rem;
+  margin-top: var(--space-xs);
+}
+
+/* Animation */
+.auth-card {
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .auth-container {
+    padding: var(--space-lg) var(--space-md);
+  }
+  
+  .auth-card {
+    padding: var(--space-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-container {
+    padding: var(--space-md) var(--space-sm);
+  }
+  
+  .form-actions {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+  
+  .form-actions .btn {
+    width: 100%;
+  }
+}

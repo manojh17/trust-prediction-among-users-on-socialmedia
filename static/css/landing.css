@@ -1,0 +1,228 @@
+/* Hero Section */
+.hero {
+  display: flex;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xxl);
+  align-items: center;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: var(--space-md);
+  line-height: 1.1;
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient 8s ease infinite;
+  background-size: 200% 200%;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: var(--space-lg);
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 12px 24px var(--shadow);
+  transition: transform var(--transition-normal);
+}
+
+.hero-image:hover {
+  transform: scale(1.02);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+/* Features Section */
+.features {
+  margin-bottom: var(--space-xxl);
+  text-align: center;
+}
+
+.features h2 {
+  margin-bottom: var(--space-xl);
+  position: relative;
+  display: inline-block;
+}
+
+.features h2::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background: var(--primary);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.feature-card {
+  background: var(--card);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  box-shadow: 0 4px 12px var(--shadow);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px var(--shadow);
+}
+
+.feature-card h3 {
+  margin-bottom: var(--space-md);
+  color: var(--primary);
+}
+
+/* How It Works */
+.how-it-works {
+  margin-bottom: var(--space-xxl);
+  text-align: center;
+}
+
+.how-it-works h2 {
+  margin-bottom: var(--space-xl);
+  position: relative;
+  display: inline-block;
+}
+
+.how-it-works h2::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background: var(--primary);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.step {
+  flex: 1;
+  position: relative;
+  padding: var(--space-lg);
+  background: var(--card);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+  margin: 0 auto var(--space-md);
+}
+
+/* CTA Section */
+.cta {
+  background: linear-gradient(135deg, var(--primary-light), var(--primary));
+  color: var(--text-on-primary);
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  margin-bottom: var(--space-xxl);
+}
+
+.cta h2 {
+  color: var(--text-on-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.cta p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: var(--space-lg);
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.cta .secondary-btn {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.cta .secondary-btn:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.cta .primary-btn {
+  background-color: white;
+  color: var(--primary);
+}
+
+.cta .primary-btn:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Animations */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+  
+  .hero-content {
+    order: 2;
+    text-align: center;
+  }
+  
+  .hero-image {
+    order: 1;
+    margin-bottom: var(--space-lg);
+  }
+  
+  .steps {
+    flex-direction: column;
+  }
+}

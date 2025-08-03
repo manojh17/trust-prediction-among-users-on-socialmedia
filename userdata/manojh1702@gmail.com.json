@@ -1,0 +1,152 @@
+[
+    {
+        "input": {
+            "Reputation_score": 0.0,
+            "orig_content_ratio": 1.0,
+            "mentions_ratio": 1.0,
+            "hashtag_ratio": 1.0,
+            "Context_score": 0.0,
+            "retweet_ratio": 1.0,
+            "like_hindex": 1.0,
+            "Social_reputation": 0.0,
+            "followers_count": 1.0,
+            "listed_count": 1.0,
+            "id_str": 0.0,
+            "has_url": 0.0,
+            "statuses_count": 1.0,
+            "mention_by_others": 1.0,
+            "retweet_hindex": 1.0,
+            "friends_count": 1.0
+        },
+        "result": {
+            "score": 42.81,
+            "color": "#d50000",
+            "classification": "Not Trusted"
+        }
+    },
+    {
+        "input": {
+            "Reputation_score": 0.0,
+            "orig_content_ratio": 1.0,
+            "mentions_ratio": 1.0,
+            "hashtag_ratio": 1.0,
+            "Context_score": 0.0,
+            "retweet_ratio": 1.0,
+            "like_hindex": 50.0,
+            "Social_reputation": 0.0,
+            "followers_count": 950.0,
+            "listed_count": 25.0,
+            "id_str": 0.0,
+            "has_url": 0.0,
+            "statuses_count": 330.0,
+            "mention_by_others": 100.0,
+            "retweet_hindex": 100.0,
+            "friends_count": 100.0
+        },
+        "result": {
+            "score": 78.43,
+            "color": "#00c853",
+            "classification": "Highly Trusted"
+        }
+    },
+    {
+        "input": {
+            "Reputation_score": 0.0,
+            "orig_content_ratio": 1.0,
+            "mentions_ratio": 1.0,
+            "hashtag_ratio": 1.0,
+            "Context_score": 0.0,
+            "retweet_ratio": 1.0,
+            "like_hindex": 50.0,
+            "Social_reputation": 0.0,
+            "followers_count": 950.0,
+            "listed_count": 25.0,
+            "id_str": 0.0,
+            "has_url": 0.0,
+            "statuses_count": 330.0,
+            "mention_by_others": 100.0,
+            "retweet_hindex": 100.0,
+            "friends_count": 100.0
+        },
+        "result": {
+            "score": 78.43,
+            "color": "#00c853",
+            "classification": "Highly Trusted"
+        }
+    },
+    {
+        "input": {
+            "Reputation_score": 0.0,
+            "orig_content_ratio": 1.0,
+            "mentions_ratio": 1.0,
+            "hashtag_ratio": 1.0,
+            "Context_score": 0.0,
+            "retweet_ratio": 1.0,
+            "like_hindex": 50.0,
+            "Social_reputation": 0.0,
+            "followers_count": 950.0,
+            "listed_count": 25.0,
+            "id_str": 0.0,
+            "has_url": 0.0,
+            "statuses_count": 330.0,
+            "mention_by_others": 100.0,
+            "retweet_hindex": 100.0,
+            "friends_count": 100.0
+        },
+        "result": {
+            "score": 78.43,
+            "color": "#00c853",
+            "classification": "Highly Trusted"
+        }
+    },
+    {
+        "input": {
+            "Reputation_score": 0.0,
+            "orig_content_ratio": 1.0,
+            "mentions_ratio": 1.0,
+            "hashtag_ratio": 1.0,
+            "Context_score": 0.0,
+            "retweet_ratio": 1.0,
+            "like_hindex": 100.0,
+            "Social_reputation": 0.0,
+            "followers_count": 500.0,
+            "listed_count": 25.0,
+            "id_str": 0.0,
+            "has_url": 0.0,
+            "statuses_count": 250.0,
+            "mention_by_others": 100.0,
+            "retweet_hindex": 100.0,
+            "friends_count": 150.0
+        },
+        "result": {
+            "score": 78.43,
+            "color": "#00c853",
+            "classification": "Highly Trusted"
+        }
+    },
+    {
+        "input": {
+            "Reputation_score": 0.0,
+            "orig_content_ratio": 0.46,
+            "mentions_ratio": 0.67,
+            "hashtag_ratio": 0.43,
+            "Context_score": 0.0,
+            "retweet_ratio": 0.44,
+            "like_hindex": 0.31,
+            "Social_reputation": 0.0,
+            "followers_count": 51.0,
+            "listed_count": 82.0,
+            "id_str": 0.0,
+            "has_url": 0.0,
+            "statuses_count": 121.0,
+            "mention_by_others": 74.0,
+            "retweet_hindex": 1.11,
+            "friends_count": 73.0
+        },
+        "result": {
+            "score": 86.55000305175781,
+            "color": "#00c853",
+            "classification": "Trusted"
+        }
+    }
+]
